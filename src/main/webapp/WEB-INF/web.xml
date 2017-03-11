@@ -5,7 +5,7 @@
 	<display-name>SIGN IN FIRST</display-name>
 	<servlet>
 		<servlet-name>Login</servlet-name>
-		<servlet-class>com.rupp.sopheak.LoginServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.LoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Login</servlet-name>
@@ -14,7 +14,7 @@
 	
 	<servlet>
 		<servlet-name>Logout</servlet-name>
-		<servlet-class>com.rupp.sopheak.LogoutServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.LogoutServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Logout</servlet-name>
@@ -23,7 +23,7 @@
 
 	<servlet>
 		<servlet-name>GetCustomers</servlet-name>
-		<servlet-class>com.rupp.sopheak.GetCustomersServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.GetCustomersServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>GetCustomers</servlet-name>
@@ -32,7 +32,7 @@
 	
 	<servlet>
 		<servlet-name>GetCustomer</servlet-name>
-		<servlet-class>com.rupp.sopheak.GetCustomerServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.GetCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>GetCustomer</servlet-name>
@@ -41,7 +41,7 @@
 	
 	<servlet>
 		<servlet-name>AddCustomer</servlet-name>
-		<servlet-class>com.rupp.sopheak.AddCustomerServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.AddCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AddCustomer</servlet-name>
@@ -50,7 +50,7 @@
 	
 	<servlet>
 		<servlet-name>UpdateCustomer</servlet-name>
-		<servlet-class>com.rupp.sopheak.UpdateCustomerServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.UpdateCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UpdateCustomer</servlet-name>
@@ -59,7 +59,7 @@
 	
 	<servlet>
 		<servlet-name>DeleteCustomer</servlet-name>
-		<servlet-class>com.rupp.sopheak.DeleteCustomerServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.DeleteCustomerServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DeleteCustomer</servlet-name>
@@ -68,7 +68,7 @@
 	
 	<servlet>
 		<servlet-name>CustomerForm</servlet-name>
-		<servlet-class>com.rupp.sopheak.CustomerFormServlet</servlet-class>
+		<servlet-class>edu.rupp.vichet.CustomerFormServlet</servlet-class>
 	</servlet>
 	
 	
@@ -81,7 +81,7 @@
 	
 	<servlet> <!-- servlet definition -->
         <servlet-name>ErrorHandler</servlet-name>
-        <servlet-class>com.rupp.sopheak.ErrorHandler</servlet-class>
+        <servlet-class>edu.rupp.vichet.ErrorHandler</servlet-class>
 	</servlet>
 	<servlet-mapping><!-- servlet mappings -->
 	        <servlet-name>ErrorHandler</servlet-name>
@@ -110,7 +110,7 @@
 	</session-config>
 	<filter>
 		<filter-name>MyFilter</filter-name>
-		<filter-class>com.rupp.sopheak.MyFilter</filter-class>
+		<filter-class>edu.rupp.vichet.MyFilter</filter-class>
 	</filter>
 
 	<filter-mapping>

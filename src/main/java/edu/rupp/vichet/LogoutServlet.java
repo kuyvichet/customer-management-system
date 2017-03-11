@@ -1,4 +1,5 @@
-package com.rupp.sopheak;
+package edu.rupp.vichet;
+
 
 
 
@@ -14,13 +15,13 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class Login
  */
-@WebServlet("/myProfile")
-public class MyProfileServlet extends HttpServlet {
+@WebServlet("/Logout")
+public class LogoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MyProfileServlet() {
+    public LogoutServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,27 +30,20 @@ public class MyProfileServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 HttpSession session = request.getSession(true);
-		 if (session.getAttribute("userId") != null) {
-			 	request.setAttribute("userId", session.getAttribute("userId"));
-			 	request.setAttribute("email", session.getAttribute("email"));
-			 	request.setAttribute("createdDate", session.getAttribute("createdDate"));
-			 	request.setAttribute("urlPhoto", session.getAttribute("urlPhoto"));
-			    request.getRequestDispatcher("/myProfile.jsp").forward(request, response);
-		 }else{
-			 response.sendRedirect("/login");
-
-		 }
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		HttpSession session = request.getSession(false);
+		session.invalidate();
+		response.sendRedirect("/login.html");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
 	}
 	
-	
+
 
 }

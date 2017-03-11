@@ -18,8 +18,8 @@
 	<properties>
     		<database.driver>com.mysql.jdbc.Driver</database.driver>
     		<database.url>jdbc:mysql://localhost:3306/customer-management?autoReconnect=true</database.url>
-    		<database.username>admin</database.username>
-    		<database.password>admin</database.password>
+    		<database.username>root</database.username>
+    		<database.password></database.password>
     		<spring.version>4.3.5.RELEASE</spring.version>
   	</properties>
   <dependencies>

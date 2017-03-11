@@ -1,4 +1,4 @@
-package com.rupp.sopheak;
+package edu.rupp.vichet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

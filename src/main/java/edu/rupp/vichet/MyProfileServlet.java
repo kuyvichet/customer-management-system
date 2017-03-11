@@ -1,4 +1,4 @@
-package com.rupp.sopheak;
+package edu.rupp.vichet;
 
 
 
@@ -9,17 +9,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Login
  */
-@WebServlet("/customer-form")
-public class CustomerFormServlet extends HttpServlet {
+@WebServlet("/myProfile")
+public class MyProfileServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CustomerFormServlet() {
+    public MyProfileServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +29,17 @@ public class CustomerFormServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-			 response.sendRedirect("/app/customer-form.html");
+		 HttpSession session = request.getSession(true);
+		 if (session.getAttribute("userId") != null) {
+			 	request.setAttribute("userId", session.getAttribute("userId"));
+			 	request.setAttribute("email", session.getAttribute("email"));
+			 	request.setAttribute("createdDate", session.getAttribute("createdDate"));
+			 	request.setAttribute("urlPhoto", session.getAttribute("urlPhoto"));
+			    request.getRequestDispatcher("/myProfile.jsp").forward(request, response);
+		 }else{
+			 response.sendRedirect("/login");
+
+		 }
 	}
 
 	/**
